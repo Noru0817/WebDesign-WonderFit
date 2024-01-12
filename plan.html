@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>WonderFit - NEWS</title>
+    <meta name="description" content="원하는 스타일을 제공해주는 웹" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Philosopher"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="plan" class="big-bg">
+      <header class="page-header wrapper">
+        <h1>
+          <a href="index.html"
+            ><img class="logo" src="images/logo.svg" alt="WonderFit 홈"
+          /></a>
+        </h1>
+        <nav>
+          <ul class="main-nav">
+            <li><a href="plan.html">기획</a></li>
+            <li><a href="experience.html">체험</a></li>
+            <li><a href="contact.html">문의</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="wrapper">
+        <h2 class="page-title">Plan</h2>
+      </div>
+      <!-- /.wrapper -->
+    </div>
+    <!-- /#plan -->
+
+    <div class="plan-contents wrapper">
+      <article>
+        <header class="post-info">
+          <h2 class="post-title">회원가입 방법</h2>
+          <p class="post-date">01/08 <span>2024</span></p>
+          <p class="post-cat">카테고리：회원가입</p>
+        </header>
+        <img id="signUpImage" src="images/sign-up.png" alt="로그인 화면" />
+        <p>1. 하단의 'SNS 로그인' 중 원하는 미디어 클릭</p>
+        <p>2. 필수 약관 및 선택 약관 동의 후 '확인' 버튼 클릭</p>
+        <p>3. 본인이 사용할 닉네임 작성 후 '가입 완료' 버튼 클릭</p>
+      </article>
+      <aside id="categoryAside">
+        <h3 class="sub-title">카테고리</h3>
+        <ul class="sub-category">
+          <li><a href="#signUpImage">회원가입</a></li>
+          <li><a href="#styleEvaluation">스타일 검사</a></li>
+          <li><a href="#searching">옷 검색</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <script>
+      /* 마우스 스크롤 이벤트 처리 함수 */
+      function handleScroll() {
+        const aside = document.getElementById("categoryAside");
+        const rect = aside.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        /* `<aside>` 요소가 화면에 보이는지 확인하고, 보이는 경우에만 효과 적용 */
+        if (rect.top < windowHeight && rect.bottom > 0) {
+          const scrollY = window.scrollY || window.pageYOffset;
+
+          /* `<aside>` 요소의 위치에 따라 효과 적용 */
+          aside.style.transform = `translateY(${scrollY}px)`;
+        }
+      }
+
+      /* 스크롤 이벤트 리스너 등록 */
+      window.addEventListener("scroll", handleScroll);
+    </script>
+
+    <div class="plan-contents wrapper">
+      <article>
+        <header class="post-info">
+          <h2 class="post-title">스타일 검사 방법</h2>
+          <p class="post-date">01/10 <span>2024</span></p>
+          <p class="post-cat">카테고리：스타일 검사</p>
+        </header>
+        <img
+          id="styleEvaluation"
+          src="images/evaluation.png"
+          alt="스타일 검사 화면"
+        />
+        <p>1. 각 카테고리 별 본인이 원하는 옷 이미지 선택</p>
+        <p>2. 모두 선택 됐을 시, '선택 완료' 버튼 클릭</p>
+        <p>3. 완료 이후, 본인 만의 스타일 유형이 계정에 저장</p>
+      </article>
+    </div>
+
+    <div class="plan-contents wrapper">
+      <article>
+        <header class="post-info">
+          <h2 class="post-title">검색 방법</h2>
+          <p class="post-date">01/11 <span>2024</span></p>
+          <p class="post-cat">카테고리：옷 검색</p>
+        </header>
+        <img id="searching" src="images/evaluation.png" alt="옷 검색 화면" />
+        <p>1. 메인 화면 우측 상단의 검색 박스 클릭</p>
+        <p>2. 검색 박스에서 제시해주는 분위기 키워드 클릭</p>
+        <p>
+          3. 해당 분위기 조합에 맞는 옷을 입은 모델 사진 및 본인 검사 결과와
+          맞는 옷 제시
+        </p>
+        <p>4. 제시된 내용 중 택 1</p>
+      </article>
+    </div>
+    <!-- /#plan-contents -->
+
+    <footer>
+      <div class="wrapper">
+        <p><small>&copy; 2024 WonderFit</small></p>
+      </div>
+    </footer>
+  </body>
+</html>
