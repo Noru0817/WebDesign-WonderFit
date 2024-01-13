@@ -51,39 +51,8 @@
         <p>1. 하단의 'SNS 로그인' 중 원하는 미디어 클릭</p>
         <p>2. 필수 약관 및 선택 약관 동의 후 '확인' 버튼 클릭</p>
         <p>3. 본인이 사용할 닉네임 작성 후 '가입 완료' 버튼 클릭</p>
-      </article>
-      <aside id="categoryAside">
-        <h3 class="sub-title">카테고리</h3>
-        <ul class="sub-category">
-          <li><a href="#signUpImage">회원가입</a></li>
-          <li><a href="#styleEvaluation">스타일 검사</a></li>
-          <li><a href="#searching">옷 검색</a></li>
-        </ul>
-      </aside>
-    </div>
-
-    <script>
-      /* 마우스 스크롤 이벤트 처리 함수 */
-      function handleScroll() {
-        const aside = document.getElementById("categoryAside");
-        const rect = aside.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-
-        /* `<aside>` 요소가 화면에 보이는지 확인하고, 보이는 경우에만 효과 적용 */
-        if (rect.top < windowHeight && rect.bottom > 0) {
-          const scrollY = window.scrollY || window.pageYOffset;
-
-          /* `<aside>` 요소의 위치에 따라 효과 적용 */
-          aside.style.transform = `translateY(${scrollY}px)`;
-        }
-      }
-
-      /* 스크롤 이벤트 리스너 등록 */
-      window.addEventListener("scroll", handleScroll);
-    </script>
-
-    <div class="plan-contents wrapper">
-      <article>
+        <hr />
+        <p></p>
         <header class="post-info">
           <h2 class="post-title">스타일 검사 방법</h2>
           <p class="post-date">01/10 <span>2024</span></p>
@@ -97,11 +66,8 @@
         <p>1. 각 카테고리 별 본인이 원하는 옷 이미지 선택</p>
         <p>2. 모두 선택 됐을 시, '선택 완료' 버튼 클릭</p>
         <p>3. 완료 이후, 본인 만의 스타일 유형이 계정에 저장</p>
-      </article>
-    </div>
-
-    <div class="plan-contents wrapper">
-      <article>
+        <hr />
+        <p></p>
         <header class="post-info">
           <h2 class="post-title">검색 방법</h2>
           <p class="post-date">01/11 <span>2024</span></p>
@@ -116,8 +82,43 @@
         </p>
         <p>4. 제시된 내용 중 택 1</p>
       </article>
+      <aside id="categoryAside">
+        <h3 class="sub-title">카테고리</h3>
+        <ul class="sub-category">
+          <li><a href="#signUpImage">회원가입</a></li>
+          <li><a href="#styleEvaluation">스타일 검사</a></li>
+          <li><a href="#searching">옷 검색</a></li>
+        </ul>
+      </aside>
     </div>
     <!-- /#plan-contents -->
+
+    <script>
+      /* 마우스 스크롤 이벤트 처리 함수 */
+      function handleScroll() {
+        const aside = document.getElementById("categoryAside");
+        const rect = aside.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        /* `<aside>` 요소가 footer 이전에 보이는지 확인하고, 보이는 경우에만 효과 적용 */
+        const footer = document.querySelector("footer");
+        const footerRect = footer.getBoundingClientRect();
+        if (rect.top < windowHeight && footerRect.top > windowHeight) {
+          const scrollY = window.scrollY || window.pageYOffset;
+
+          /* `<aside>` 요소의 위치에 따라 효과 적용 */
+          aside.style.transform = `translateY(${scrollY}px)`;
+        } else {
+          aside.style.transform = "translateY(0)";
+        }
+      }
+
+      /* 스크롤 이벤트 리스너 등록 */
+      window.addEventListener("scroll", handleScroll);
+
+      /* 페이지 로드 시 스크롤 이벤트를 한 번 수행하여 초기 위치 설정 */
+      handleScroll();
+    </script>
 
     <footer>
       <div class="wrapper">

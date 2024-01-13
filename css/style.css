@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* 공통 부분
+/* Globals
 ------------------------------- */
 html {
   font-size: 100%;
@@ -23,14 +23,14 @@ img {
   padding: 0 4%;
 }
 
-/* 큰 배경 이미지 */
+/* Background Image */
 .big-bg {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
 }
 
-/* 제목 */
+/* Title */
 .page-title {
   font-size: 5rem;
   font-family: "Philosopher", serif;
@@ -44,7 +44,7 @@ img {
   font-weight: normal;
 }
 
-/* 버튼 */
+/* Button */
 .button {
   font-size: 1.375rem;
   background: rgb(155, 0, 221);
@@ -110,6 +110,7 @@ iframe {
 .home-content button {
   margin: 0 auto;
 }
+
 /* Plan
 ------------------------------- */
 #plan {
@@ -235,7 +236,7 @@ aside p {
   min-height: 100vh;
 }
 
-/* 입력 양식 */
+/* Input Form */
 form div {
   margin-bottom: 14px;
 }
@@ -269,7 +270,7 @@ input[type="submit"] {
   line-height: 1;
 }
 
-/* 가게 정보와 지도 */
+/* Location */
 #location {
   padding: 4% 0;
 }
@@ -303,7 +304,7 @@ input[type="submit"] {
   width: 30%;
 }
 
-/* 푸터
+/* Footer
 ------------------------------- */
 footer {
   background: #432;
@@ -315,7 +316,7 @@ footer p {
   font-size: 0.875rem;
 }
 
-/* 모바일 버전
+/* for Mobile
 ------------------------------- */
 @media (max-width: 600px) {
   .page-title {
@@ -378,8 +379,8 @@ footer p {
     margin-left: 80px;
   }
 
-  /* MENU */
-  .menu-content {
+  /* Plan */
+  .plan-content {
     margin-top: 20%;
   }
 
@@ -388,14 +389,14 @@ footer p {
     margin-top: 40px;
   }
 
-  /* 입력 양식 */
+  /* Input Form */
   input[type="text"],
   input[type="email"],
   textarea {
     max-width: 100%;
   }
 
-  /* 가게 정보와 지도와 SNS */
+  /* Location & SNS */
   #location .wrapper,
   #sns .wrapper {
     flex-direction: column;
