@@ -127,7 +127,7 @@ iframe {
   margin-bottom: 50px;
 }
 
-/* 기사 부분 */
+/* Article */
 article {
   width: 74%;
 }
@@ -341,11 +341,11 @@ footer p {
     margin-top: 20%;
   }
 
-  /* NEWS */
-  .news-contents {
+  /* SideBar */
+  .sub-contents {
     flex-direction: column;
   }
-  #news .page-title {
+  #sub .page-title {
     margin-top: 30px;
   }
   article,

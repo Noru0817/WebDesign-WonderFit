@@ -2,7 +2,7 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <title>WonderFit - NEWS</title>
+    <title>WonderFit - PLAN</title>
     <meta name="description" content="원하는 스타일을 제공해주는 웹" />
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -100,7 +100,7 @@
         const rect = aside.getBoundingClientRect();
         const windowHeight = window.innerHeight;
 
-        /* `<aside>` 요소가 footer 이전에 보이는지 확인하고, 보이는 경우에만 효과 적용 */
+        /* <aside>요소가 footer 이전에 보이는지 확인하고, 보이는 경우에만 효과 적용 */
         const footer = document.querySelector("footer");
         const footerRect = footer.getBoundingClientRect();
         if (rect.top < windowHeight && footerRect.top > windowHeight) {
